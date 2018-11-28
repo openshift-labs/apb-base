@@ -1,0 +1,4 @@
+FROM ansibleplaybookbundle/apb-base:release-1.2
+
+RUN yum -y install --setopt=tsflags=nodocs python2-jmespath \
+    && yum clean all && rm -rf /var/cache/yum
